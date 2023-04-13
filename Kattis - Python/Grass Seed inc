@@ -1,0 +1,15 @@
+cost = float(input())
+lawnCount = int(input())
+lawnDimensions = []
+for _ in range(lawnCount):
+    lawnDimensions.append(input())
+
+squareFootage = 0
+for _ in range(len(lawnDimensions)):
+    workingData = lawnDimensions[_ - 1]
+    data = workingData.split(' ')
+    a = float(data[0])
+    b = float(data[1])
+    squareFootage += (a * b)
+
+print(squareFootage * cost)
